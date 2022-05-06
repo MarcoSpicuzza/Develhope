@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>Crea una pagina con articolo per blog</title>
+    </head>
 
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Lezione HTML</title>
-</head>
-
-<body>
-
-</body>
-
+    <body>
+        <main>
+            <article>
+                <header>
+                    <img src="assets/laptop.png" alt="un laptop">
+                    <h1>I migliori notebook economici</h1>
+                    <p>Il vostro vecchio PC desktop è diventato lento e volete sostituirlo? Vi serve un portatile da usare solo in alcune occasioni come viaggi di lavoro o giornate di studio al parco?</p>
+                    <p>Nella nostra guida trovate una selezione di modelli ideali per svolgere le attività di base venduti a prezzi estremamente concorrenziali.</p>
+                    <ul>
+                        <li>Microsoft Surface Go 2</li>
+                        <li>Lenovo IdeaPad Duet Chromebook</li>
+                        <li>HP Chromebook 14</li>
+                    </ul>
+                    <img src="assets/hands.png" alt="un laptop con delle mani">
+                </header>
+            </article>
+        </main>
+        <footer>
+            <form action="start.html" method="GET">
+                <h3>Iscriviti alla newsletter</h3>
+                <div class="email-form">
+                    <label for="email">
+                        <input type="email" name="email" maxlength="50" minlength="5" placeholder="Indirizzo email" required>
+                    </label>
+                    <span>
+                        <input type="submit" value="Iscriviti" style="background-color: black; color: white; font-weight: 900;">
+                    </span>
+                </div>
+            </form>
+        </footer>
+    </body>
 </html>
