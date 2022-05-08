@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Lezione HTML</title>
+    <title>form</title>
 	<style>
 		label {
 			display: block
@@ -14,7 +14,46 @@
 </head>
 
 <body>
-
+	<form action="index.html" method="GET">
+		<label for="email">
+			<input type="email" name="email" placeholder="email" required>
+		</label>
+		<label for="password">
+			<input type="password" name="password" placeholder="password" required>
+		</label>
+		<label for="nome">
+			<input type="text" name="nome" placeholder="nome" required>
+		</label>
+		<label for="cognome">
+			<input type="text" name="cognome" placeholder="cognome" required>
+		</label>
+		<label for="data-di-nascita">
+			<input type="date" name="data-di-nascita" required>
+		</label>
+		<label for="numero">
+			<input type="number" name="numero" placeholder="+39" required>
+		</label>
+		<fieldset>
+			<legend>Piano di abbonamento</legend>
+			<select name="abbonamento">
+				<option value="free">Free</option>
+				<option value="standard">Standard</option>
+				<option value="silver">Silver</option>
+				<option value="gold">Gold</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend>Vantaggi PRO</legend>
+			<input type="checkbox" name="pro">
+		</fieldset>
+		<fieldset>
+			<legend>Carta di credito</legend>
+			<input type="number" name="credit-number" placeholder="0000 0000 0000 0000" required>
+			<input type="number" name="cvc" placeholder="000" required>
+			<input type="month" name="scadenza" required>
+		</fieldset>
+		<input type="text" name="indirizzo" required placeholder="Via">
+	</form>
 </body>
 
 </html>
