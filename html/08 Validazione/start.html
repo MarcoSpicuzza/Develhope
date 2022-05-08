@@ -17,21 +17,21 @@
 <form action="#">
 	<div>
 		<label for="form-email">Email</label>
-		<input type="email" id="form-email" name="email"/>
+		<input type="email" id="form-email" name="email" required/>
 		<label for="form-pass">Password</label>
-		<input type="password" id="form-pass" name="pass"/>
+		<input type="password" id="form-pass" name="pass" required/>
 	</div>
 	<div>
 		<label for="form-name">Nome e cognome</label>
-		<input type="text" id="form-name" name="name"/>
+		<input type="text" id="form-name" name="name" required/>
 		<label for="form-dob">Data di nascita</label>
-		<input type="date" id="form-dob" name="dob"/>
+		<input type="date" id="form-dob" name="dob" required/>
 		<label for="form-tel">Telefono</label>
-		<input type="tel" id="form-tel" name="tel"/>
+		<input type="tel" id="form-tel" name="tel" required/>
 	</div>
 	<div>
 		<label for="form-plan">Piano di abbonamento</label>
-		<select id="form-plan" name="plan">
+		<select id="form-plan" name="plan" required>
 			<option value="0">Free</option>
 			<optgroup label="Mensili">
 				<option value="199">1.99€/mese</option>
@@ -40,17 +40,17 @@
 			</optgroup>
 		</select>
 		<label for="form-pro">Piano PRO</label>
-		<input id="form-pro" name="pro" type="checkbox"/>
+		<input id="form-pro" name="pro" type="checkbox" required/>
 	</div>
 	<div>
 		<label for="form-cc">Numero Carta</label>
-		<input id="form-cc" name="cc" type="text"/>
+		<input id="form-cc" name="cc" type="text" min="16" max="16" maxlength="16" pattern="[0-1][0-9]-[0-9][0-9]" placeholder="XXXX XXXX XXXX XXXX" required/>
 		<label for="form-cvc">CVC</label>
-		<input id="form-cvc" name="cvc" type="text"/>
+		<input id="form-cvc" name="cvc" type="text" min="3" maxlength="3" max="3" pattern="([0-9]|[0-9]|[0-9])" placeholder="123" required/>
 		<label for="form-exp">Scadenza</label>
-		<input id="form-exp" name="exp" type="date"/>
+		<input id="form-exp" name="exp" type="date" required/>
 		<label for="form-address">Indirizzo di fatturazione</label>
-		<input type="text" id="form-address" name="address"/>
+		<input type="text" id="form-address" name="address" required/>
 	</div>
 
 	<button type="submit">Registrati</button>
