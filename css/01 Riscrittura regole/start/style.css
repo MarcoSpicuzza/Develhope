@@ -1,0 +1,18 @@
+:root {
+  --sfondo-nero: #011212;
+  --larghezza: 100px;
+  --altezza: 100px;
+  --sfondo-salmone: #ff8800;
+  --bordo-rotondo: 50px;
+}
+
+body {
+    background-color: var(--sfondo-nero);
+}
+
+.ball {
+    width: var(--larghezza);
+    height: var(--altezza);
+    background-color: var(--sfondo-salmone);
+    border-radius: var(--bordo-rotondo);
+}

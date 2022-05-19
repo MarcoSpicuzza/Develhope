@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 1000;
+    font-size: 20px;
+}
+
+.calculator-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-display {
+    background-color: grey;
+    color: white;
+    grid-column: 1/5;
+    display: grid;
+    align-items: center;
+    justify-content: end;
+    padding-right: 20px;
+    font-size: 40px;
+}
+
+.operator-result {
+    grid-row: 3/7;
+    background-color: pink ;
+    grid-column: 4;
+}
+
+.operator-divide, .operator-multiply, .operator-subtract, .operator-add {
+    background-color: rgb(211, 221, 221);
+}
+
+.operator-add {
+    grid-row: 2/2;
+}
+
+.operator-subtract {
+    grid-row: 2/2;
+    order: 2;
+}
+
+.operator-multiply {
+    grid-row: 2/2;
+    order: 3;
+}
+
+.operator-divide {
+    grid-row: 2/2;
+    order: 4;
+}
+
+.allcancel {
+    grid-row: 6/6;
+    grid-column: 3/3;
+}
+
+.floatingpoint {
+    grid-row: 6/6;
+    grid-column: 2/2;
+}
