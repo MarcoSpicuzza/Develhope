@@ -5,55 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="style.css">
     <title>Lezione CSS</title>
-    <div class="sidenav">
-        <div class="logo-links_container">
-            <div class="logo">
-                <img src="logo.png" alt="logo">
-            </div>
-            <div class="nav-links">
-                <a href="#">HOME</a>
-                <a href="#">PRODOTTI</a>
-                <a href="#">FAQS</a>
-                <a href="#">CONTATTACI</a>
-            </div>
-        </div>
-        <div class="user">
-            <div class="avatar">Avatar</div>
-            <div class="nickname">Nome utente</div>
-        </div>
-    </div>
-
-    <style>
-        .sidenav {
-            width: 200px;
-            height: 100%;
-            background-color: rgb(49, 75, 75);
-            display: flex;
-            flex-flow: column;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            width: 100px;
-            border: 1px solid yellow;
-        }
-
-
-        .nav-links> a {
-            color: #2b2b2b;
-        }
-
-        .nav-links> a:hover {
-            color: #2b2bb2;
-            transition: 0.3s;
-        }
-    </style>
 </head>
 
 <body>
-    
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png" alt="logo" placeholder="logo">
+        </div>
+            <ul class="sidebar-ul">
+            <a href="#">Link-1</a>
+            <a href="#">Link-2</a>
+            <a href="#">Link-3</a>
+            <a href="#">Link-4</a>  
+        </ul>
+        <div class="sidebar-user">
+            <img class="Avatar" src="https://www.pngkit.com/png/detail/133-1338563_boys-wrestling-avatar-html.png" alt="avatar">
+            <p>Nome Utente</p>
+        </div>
+    </aside>
 </body>
 
 </html>

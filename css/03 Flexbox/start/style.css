@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(207, 153, 51);
+}
+
+.sidebar-logo {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.sidebar-ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.sidebar-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+aside {
+    width: 200px;
+    height: 100%;
+}
+
+ul {
+    flex-grow: 1;
+}
+
+ul a {
+    text-decoration: none;
+    color: #2b2b2b;
+}
+
+ul a:hover {
+    color: #2b2bb2;
+    transition: 0.3s;
+}
+
+.logo, .Avatar {
+    width: 50%;
+}
