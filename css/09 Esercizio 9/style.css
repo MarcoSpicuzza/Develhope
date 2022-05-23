@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: center;
+    align-content: center;
+    margin-top: 10%;
+    gap: 1em;
+}
+
+.card {
+    background: linear-gradient(#b0b0b0, #efefef);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px -4px rgb(160, 157, 157);
+}
+
+.avatar-header_container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.header-text {
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+}
+
+.header-text > h4 {
+    font-weight: 520;
+}
+
+.header-text > h5 {
+    color: #ffffff;
+    font-weight: 520;
+}
+
+.avatar {
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+}
+
+.avatar-circle {
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+.three-dots_container {
+    position: relative;
+    float: right;
+    margin-right: 0.5em;
+    margin-top: 0.8em;
+}
+
+.dot {
+    height: 4px;
+    width: 4px;
+    background-color: #010101;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.icons-container {
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.user-comment {
+    font-weight: bold;
+}
+
+.comment-container {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 30px;
+    font-size: 0.9em;
+}
+
+/* TABLET */
+
+@media screen and (max-width: 768px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        justify-content: center;
+        align-content: center;
+        margin-top: 10%;
+        gap: 1em;
+    }
+}
+
+/* SMARTPHONE */
+
+@media screen and (max-width: 375px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(1, 300px);
+        justify-content: center;
+        align-content: center;
+        margin-top: 10%;
+        gap: 1em;
+    }
+}
