@@ -86,6 +86,8 @@ body {
     background-color: grey;
 }
 
+/*MEDIA SMARTPHONE*/
+
 @media screen and (max-width: 768px) {
     .second-aside {
         display: none;
