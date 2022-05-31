@@ -1,7 +1,5 @@
-.flex-container {
+body {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 #yellow {
@@ -18,7 +16,7 @@
 
 #orange {
     order: 4;
-    flex-grow: 3;
+    flex: 2;
 }
 
 #blue {
