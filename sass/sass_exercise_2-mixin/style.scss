@@ -44,5 +44,8 @@ div {
     }
     section:last-of-type {
         @include article(green, blue, 24px);
+        article {
+            width: 100%;
+        }
     }
 }

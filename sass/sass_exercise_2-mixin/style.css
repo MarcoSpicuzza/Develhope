@@ -34,5 +34,8 @@ div section:last-of-type {
   border-color: blue 1px solid;
   font-size: 24px;
 }
+div section:last-of-type article {
+  width: 100%;
+}
 
 /*# sourceMappingURL=style.css.map */
