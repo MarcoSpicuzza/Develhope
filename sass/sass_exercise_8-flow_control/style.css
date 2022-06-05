@@ -103,7 +103,6 @@ div section:last-of-type article p {
 .fs-container div:nth-of-type(10) {
   background-color: blue;
   color: red;
-  font-weight: bold;
 }
 .fs-container div:nth-of-type(11) {
   background-color: #737373;

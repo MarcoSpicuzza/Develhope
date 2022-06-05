@@ -91,7 +91,7 @@ div {
                 &:nth-of-type(#{$i}) {
                     background-color: $color-secondary;
                     color: $color-primary;
-                    font-weight: bold;
+                   
                 }
             }
             @else {
