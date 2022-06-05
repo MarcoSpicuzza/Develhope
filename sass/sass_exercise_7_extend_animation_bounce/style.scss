@@ -1,0 +1,36 @@
+@use 'random-hex';
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+%random-hex {
+    background-color: random-hex.random-hex();
+}
+
+@mixin bounce ($inizio, $fine) {
+	animation: bounce 1s ease 0s infinite normal forwards;
+	@keyframes bounce {
+		0%, 20%, 50%, 80%, 100% {transform: translateY($inizio);}
+		40% {transform: translateY($fine);}
+		60% {transform: translateY(calc($fine / 2));}
+	}
+}
+
+.container {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.bounce {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border-bottom: 10px solid black;
+	@include bounce (0, 40px);
+    @extend %random-hex;
+}

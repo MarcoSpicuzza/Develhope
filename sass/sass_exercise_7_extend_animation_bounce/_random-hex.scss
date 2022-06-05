@@ -1,0 +1,14 @@
+@function random-hex() {
+    $color: '';
+    $i: 6;
+    @while $i > 0 {
+      $hex: random(16) - 1;
+      $letters: A, B, C, D, E, F;
+      @if $hex > 9 { 
+        $hex: nth($letters, ($hex - 9));
+      };
+      $color: str-insert($color, ("" + $hex), 0);
+      $i: $i - 1;
+    }
+    @return unquote("#"+"#{$color}");
+ }

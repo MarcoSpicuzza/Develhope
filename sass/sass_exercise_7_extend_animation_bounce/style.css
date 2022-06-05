@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.bounce {
+  background-color: #C0803A;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bounce {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-bottom: 10px solid black;
+  animation: bounce 1s ease 0s infinite normal forwards;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(40px);
+  }
+  60% {
+    transform: translateY(20px);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
