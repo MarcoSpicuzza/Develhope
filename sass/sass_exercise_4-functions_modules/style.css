@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  border: 0.0625rem solid red;
+  padding: 2rem 1rem 1rem;
+}
+div h1 {
+  color: green;
+  text-align: center;
+  border-bottom: solid blue 0.0625rem;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+div section {
+  display: flex;
+  justify-content: space-between;
+}
+div section article {
+  color: blue;
+  border: green 0.0625rem solid;
+  font-size: 1rem;
+  border: 0.0625rem solid green;
+}
+div section article p {
+  text-align: center;
+}
+div section article:nth-of-type(odd) p {
+  color: blue;
+}
+div section article:nth-of-type(even) p {
+  color: red;
+}
+div section:last-of-type {
+  color: green;
+  border: blue 0.0625rem solid;
+  font-size: 1.5rem;
+}
+div section:last-of-type article {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

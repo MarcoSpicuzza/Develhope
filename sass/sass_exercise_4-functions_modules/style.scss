@@ -1,0 +1,54 @@
+@use 'variabili';
+@use 'funzione';
+
+@mixin article ($color, $border-color, $font-size-article) {
+    color: $color;
+    border: $border-color funzione.rem(1px) solid;
+    font-size: $font-size-article;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div {
+    border: funzione.rem(1px) solid variabili.$color-primary;
+    padding: 2rem 1rem 1rem;
+    h1 {
+        color: variabili.$color-tertiary;
+        text-align: center;
+        border-bottom: solid variabili.$color-secondary funzione.rem(1px);
+        width: fit-content;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
+    section {
+        display: flex;
+        justify-content: space-between;
+        article {
+            @include article(variabili.$color-secondary, variabili.$color-tertiary, variabili.$font-size-article);
+            border: funzione.rem(1px) solid variabili.$color-tertiary;
+            p {
+                text-align: center;
+            } 
+        }
+        article:nth-of-type(odd) {
+            p {
+                color: variabili.$color-secondary;
+            }
+        }
+        article:nth-of-type(even) {
+            p {
+                color: variabili.$color-primary;
+            }
+        }
+    }
+    section:last-of-type {
+        @include article (variabili.$color-tertiary, variabili.$color-secondary, funzione.rem(variabili.$footer-size));
+        article {
+            width: 100%;
+        }
+    }
+}
