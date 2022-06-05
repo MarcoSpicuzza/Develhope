@@ -1,0 +1,62 @@
+$color-primary: red;
+
+$color-tertiary: green; 
+
+$color-secondary: blue;
+
+@mixin article ($color, $border-color, $font-size: 1rem) {
+    color: $color;
+    border-color: $border-color 1px solid;
+    font-size: $font-size;
+}
+
+%titolo {
+    color: $color-tertiary;
+    text-align: center;
+}
+
+div {
+    border: 1px solid $color-primary;
+    padding: 2rem 1rem 1rem;
+    h1 {
+        color: $color-tertiary;
+        text-align: center;
+        border-bottom: 1px solid $color-secondary;
+        width: fit-content;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        @extend %titolo;
+    }
+    h2 {
+        @extend %titolo;
+        border: red 1px solid;
+    }
+    section {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        article {
+            border: 1px solid $color-tertiary;
+            @include article (blue, green);
+            p {
+                text-align: center;
+            }
+            &:nth-of-type(odd) {
+                p {
+                    color: $color-secondary;
+                }
+            }
+            &:nth-of-type(even) {
+                p {
+                    color: $color-primary;
+                }
+            }
+        }
+        &:last-of-type {
+            @include article(green, blue, 24px);
+            article {
+                width: 100%;
+            }
+        }
+    }
+}

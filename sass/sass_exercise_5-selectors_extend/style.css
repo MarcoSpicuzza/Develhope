@@ -1,0 +1,50 @@
+div h2, div h1 {
+  color: green;
+  text-align: center;
+}
+
+div {
+  border: 1px solid red;
+  padding: 2rem 1rem 1rem;
+}
+div h1 {
+  color: green;
+  text-align: center;
+  border-bottom: 1px solid blue;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+div h2 {
+  border: red 1px solid;
+}
+div section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+div section article {
+  border: 1px solid green;
+  color: blue;
+  border-color: green 1px solid;
+  font-size: 1rem;
+}
+div section article p {
+  text-align: center;
+}
+div section article:nth-of-type(odd) p {
+  color: blue;
+}
+div section article:nth-of-type(even) p {
+  color: red;
+}
+div section:last-of-type {
+  color: green;
+  border-color: blue 1px solid;
+  font-size: 24px;
+}
+div section:last-of-type article {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
