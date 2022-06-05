@@ -1,0 +1,114 @@
+$color-primary: red;
+
+$color-tertiary: green; 
+
+$color-secondary: blue;
+
+$white: white;
+$black: black;
+
+@mixin article ($color, $border-color, $font-size: 1rem) {
+    color: $color;
+    border-color: $border-color 1px solid;
+    font-size: $font-size;
+}
+
+%titolo {
+    color: $color-tertiary;
+    text-align: center;
+}
+
+div {
+    border: 1px solid $color-primary;
+    h1 {
+        text-align: center;
+        border-bottom: 1px solid $color-secondary;
+        width: fit-content;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        @extend %titolo;
+    }
+    h2 {
+        @extend %titolo;
+        border: red 1px solid;
+        width: 300px;
+        padding: 1rem;
+        margin: auto;
+    }
+    section {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        article {
+            border: 1px solid $color-tertiary;
+            padding: 2rem;
+            @include article (blue, green);
+            p {
+                text-align: center;
+            }
+            &:nth-of-type(odd) {
+                p {
+                    color: $color-secondary;
+                }
+            }
+            &:nth-of-type(even) {
+                p {
+                    color: $color-primary;
+                }
+            }
+        }
+        &:last-of-type {
+            @include article(green, blue, 24px);
+            article {
+                width: 100%;
+                padding: 1rem;
+                p {
+                    color: green;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@function px-to-rem($px) {
+    @return calc($px/16px*1rem);
+}
+
+.fs-container {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+        height: px-to-rem(45px);
+        width: px-to-rem(45px);
+        border: px-to-rem(1px) solid $color-primary;
+
+        $amount: 5;
+        @for $i from 1 to 20 {
+            @if $i == 10 {
+                &:nth-of-type(#{$i}) {
+                    background-color: $color-secondary;
+                    color: $color-primary;
+                    font-weight: bold;
+                }
+            }
+            @else {
+                &:nth-of-type(#{$i}) {
+                    background-color: darken($white, $amount);
+                    color: lighten($black, $amount);
+                }
+            }
+            $amount: $amount + 5;
+            }
+    }
+}
+
+$sizes: 1rem, 2rem, 3rem;
+
+@each $size in $sizes {
+    .fs-#{$size} {
+        font-size: $size;
+    }
+}
