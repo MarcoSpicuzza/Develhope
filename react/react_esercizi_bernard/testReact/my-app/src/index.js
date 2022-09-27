@@ -1,15 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import Home from './Home';
-// import Odd from './Odd';
-// import Even from './Even';
+import FetchComponent from './FetchComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home />
-    {/* <Odd />
-    <Even /> */}
+    <FetchComponent/>
   </React.StrictMode>
 );
